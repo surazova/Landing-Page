@@ -1,9 +1,11 @@
-# Landing-Page
+# Project #2: Landing Page
 
-- Manipulating the DOM exercise.
-- Exercise programmatically builds navigation,
-- scrolls to anchors from navigation,
-- and highlights section in viewport upon scrolling.
+# Project Summary
+
+- Manipulating the DOM exercise
+- Programatically build the navigation
+- Scrolls to anchors from navigation
+- Highlights section in viewport upon scrolling
 
 # Languages Used
 
@@ -11,6 +13,6 @@
 - CSS
 - Javascript
 
-# Public Preview:
+# Live Demo
 
 https://surazova.github.io/Landing-Page/

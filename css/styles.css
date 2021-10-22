@@ -376,3 +376,54 @@ header {
 .nav-link.active {
   background-color: #cc1;
 }
+
+.navbar_list li.active {
+  background-color: blue;
+}
+
+li.active {
+  color: red;
+}
+
+.active-section-highlighted {
+  color: brown;
+}
+
+nav .navbar-links ul li.active {
+  background-color: crimson;
+}
+nav .navbar-links ul li.active a {
+  color: rgb(255, 255, 255);
+}
+
+/* .navbar_list a.active {
+  color: purple;
+} */
+
+/* .nav-link.active {
+  color: red;
+} */
+
+.navbar-links ul li.active {
+  color: orange;
+}
+
+li.active {
+  color: orange;
+}
+
+.navbar li.active {
+  color: orange;
+}
+
+.navbar a.active {
+  color: orange;
+}
+
+nav ul li.active {
+  color: blue;
+}
+
+.nav-link.active {
+  color: purple;
+}
