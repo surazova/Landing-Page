@@ -17,3 +17,10 @@
 # Live Demo
 
 https://surazova.github.io/Landing-Page/
+
+# References / Credit
+
+- https://codepen.io/dbilanoski/pen/LabpzG
+- https://codedaily.io/tutorials/Sticky-Header-with-Highlighting-Sections-on-Scroll
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+- https://www.w3schools.com/howto/howto_js_active_element.asp
