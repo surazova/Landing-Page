@@ -1,9 +1,10 @@
 # Project #2: Landing Page
 
+- Manipulating the DOM exercise
+
 # Project Summary
 
-- Manipulating the DOM exercise
-- Programatically build the navigation
+- Programmatically build the navigation
 - Scrolls to anchors from navigation
 - Highlights section in viewport upon scrolling
 

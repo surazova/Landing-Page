@@ -19,96 +19,71 @@
 //  */
 
 // *** Define Global Variables ***/
-const navbarList = document.getElementById("navbar_list");
+
+const navbarList = document.getElementById("navigation_list");
 const sections = document.querySelectorAll("section");
 
 // *** End Global Variables ***/
 
-//  * Begin Main Functions */
-
-// Add class 'active' to section when near top of viewport
-
-// Scroll to anchor ID using scrollTO event
-
-/**
- * End Main Functions
- * Begin Events
- *
- */
-
-// Build menu
+// *** Begin Main Functions ***/
 
 // Navbar Hamburger Menu toggle
-const toggleButton = document.getElementsByClassName("toggle-button")[0];
-const navbarLinks = document.getElementsByClassName("navbar-links")[0];
+const togglerButton = document.getElementsByClassName("toggle-button")[0];
+const navbarLinks = document.getElementsByClassName("navigationbar-links")[0];
 
-toggleButton.addEventListener("click", () => {
+togglerButton.addEventListener("click", function () {
   navbarLinks.classList.toggle("active");
 });
 
-// Scroll to section on link click
+// Programmatically create the navigation bar by obtaining the "h2" element and placing it inside of an array
+// The array will be the title of the Navigation Bar Li element
+// Encorporate smooth scrolling to sections
 
-// Set sections as active
+const nameOfSections = [];
+const idOfSections = [];
 
-const sectionNameArray = [];
-const sectionIdArray = [];
-
-// extract id and names of sections
 for (let section of sections) {
-  sectionNameArray.push(section.getElementsByTagName("h2")[0].textContent);
-
-  sectionIdArray.push(`${section.id}`);
+  nameOfSections.push(section.getElementsByTagName("h2")[0].textContent);
+  idOfSections.push(section.id);
 }
+function navigationBarCreate() {
+  for (let i = 0; i < 4; i++) {
+    const createNavLi = document.createElement("li");
+    createNavLi.classList = "navigation_item";
+    navbarList.appendChild(createNavLi);
+    createNavLi.innerHTML = `<a class="navigation-link">${nameOfSections[i]}</a>`;
 
-// Build the navbar
-function buildNav() {
-  for (let i = 0; i < sectionIdArray.length; i++) {
-    const liElement = document.createElement("li");
-    liElement.classList = "navbar_item";
-    liElement.id = `${sectionIdArray[i]}_nav`.toLowerCase();
-
-    navbarList.appendChild(liElement);
-
-    // adds corresponding id
-
-    liElement.innerHTML = `<a class="nav-link">${sectionNameArray[i]}</a>`;
-
-    // Add smooth scrolling
-    liElement.addEventListener("click", () => {
+    createNavLi.addEventListener("click", function () {
       sections[i].scrollIntoView({
         behavior: "smooth",
-        block: "end",
+        block: "start",
         inline: "nearest",
       });
     });
   }
 }
+navigationBarCreate();
 
-buildNav();
+// Add class 'active' to section when near top of viewport while manually scrolling
+const getLinks = document.querySelectorAll(".navigation-link");
+const getSection = document.querySelectorAll("section");
+function activeToggler() {
+  let index = getSection.length;
+  while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+  getLinks.forEach((link) => link.classList.remove("active"));
+  getLinks[index].classList.add("active");
+}
 
-// Add and remove active class for navbar
-navbar = document.querySelectorAll(".nav-link");
-console.log(navbar);
+activeToggler();
+window.addEventListener("scroll", activeToggler);
 
-navbar.forEach((element) => {
+// Add and remove active class for Navigation bar
+navigation = document.querySelectorAll(".navigation-link");
+console.log(navigation);
+
+navigation.forEach((element) => {
   element.addEventListener("click", function () {
-    navbar.forEach((nav) => nav.classList.remove("active"));
-
+    navigation.forEach((nav) => nav.classList.remove("active"));
     this.classList.add("active");
   });
 });
-
-// Add active class to navbar item when in viewport while scrolling
-const links = document.querySelectorAll(".nav-link");
-const sectionsss = document.querySelectorAll("section");
-function changeLinkState() {
-  let index = sectionsss.length;
-
-  while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
-
-  links.forEach((link) => link.classList.remove("active"));
-  links[index].classList.add("active");
-}
-
-changeLinkState();
-window.addEventListener("scroll", changeLinkState);

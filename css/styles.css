@@ -26,6 +26,7 @@ h1 {
   font-family: "Fira Sans", sans-serif;
   font-size: 3em;
   margin: 2em 1rem;
+  padding: 100px;
 }
 
 @media only screen and (min-width: 35em) {
@@ -271,24 +272,24 @@ body {
 }
 
 /* Title of Navbar*/
-.brand-title {
+.navigation-title {
   font-size: 1.5rem;
   margin: 0.8rem;
 }
 
 /* Navbar Links */
-.navbar-links ul {
+.navigationbar-links ul {
   margin: 0;
   padding: 0;
   display: flex;
 }
 
-.navbar-links li {
+.navigationbar-links li {
   list-style: none;
 }
 
 /* Navbar Links Anchor Tags */
-.navbar-links li a {
+.navigationbar-links li a {
   text-decoration: none;
   color: white;
   padding: 2rem;
@@ -322,7 +323,7 @@ body {
     display: flex;
   }
 
-  .navbar-links {
+  .navigationbar-links {
     display: none;
     width: 100%;
   }
@@ -333,20 +334,20 @@ body {
     align-items: flex-start;
   }
 
-  .navbar-links ul {
+  .navigationbar-links ul {
     flex-direction: column;
     width: 100%;
   }
 
-  .navbar-links li {
+  .navigationbar-links li {
     text-align: center;
   }
 
-  .navbar-links li a {
+  .navigationbar-links li a {
     padding: 0.5rem 1rem;
   }
 
-  .navbar-links.active {
+  .navigationbar-links.active {
     display: flex;
   }
 
@@ -368,16 +369,15 @@ header {
   text-align: center;
 }
 
-/* Navbar Links Hover State
-.navbar-links li:hover {
+/* Navbar Links Hover State */
+.navigationbar-links li:hover {
   background-color: red;
-} */
-
-.nav-link.active {
+}
+.navigation-link.active {
   background-color: #cc1;
 }
 
-.navbar_list li.active {
+.navigation_list li.active {
   background-color: blue;
 }
 
@@ -389,53 +389,13 @@ li.active {
   color: brown;
 }
 
-nav .navbar-links ul li.active {
+nav .navigationbar-links ul li.active {
   background-color: crimson;
 }
-nav .navbar-links ul li.active a {
+nav .navigationbar-links ul li.active a {
   color: rgb(255, 255, 255);
 }
 
-/* .navbar_list a.active {
-  color: purple;
-} */
-
-/* .nav-link.active {
-  color: red;
-} */
-
-.navbar-links ul li.active {
-  color: orange;
-}
-
-li.active {
-  color: orange;
-}
-
-.navbar li.active {
-  color: orange;
-}
-
 .navbar a.active {
-  color: orange;
-}
-
-nav ul li.active {
-  color: blue;
-}
-
-.nav-link.active {
-  color: purple;
-}
-
-.your-active-class {
-  color: blue;
-}
-
-.landing__container.active {
-  background-color: red;
-}
-
-section.active {
   color: blue;
 }
