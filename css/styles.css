@@ -427,3 +427,15 @@ nav ul li.active {
 .nav-link.active {
   color: purple;
 }
+
+.your-active-class {
+  color: blue;
+}
+
+.landing__container.active {
+  background-color: red;
+}
+
+section.active {
+  color: blue;
+}
